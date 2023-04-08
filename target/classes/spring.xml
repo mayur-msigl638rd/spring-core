@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  
+  
+  
+  <!-- this is our bean  -->
+  <!--  <bean class= "com.springcore.Student" name= "student1">
+ 
+  <property name= "id">
+  <value>2345</value>
+  </property>
+  
+  <property name = "name">
+  <value> Mayur Prabhat</value>
+  </property>
+  
+  <property name = "address">
+  <value>saharanpur</value>
+  </property>
+  
+  OR
+ 
+  <property name="id" value  ="123432" />
+ <property name="name" value = "Mayur" />
+ <property name ="address" value = "saharanpur" /> 
+  
+   </bean>
+   -->
+   
+              <!-- OR -->
+   <bean class = "com.springcore.Student" name = "student1" p:id= "1213" p:name="mayur"  p:address="Saharnpur" />
+  
+  
+  
+  
+  <bean class = "com.springcore.Student" name = "student2">
+   
+   <property name = "id">
+  <value>12343</value>
+  </property>
+  
+  <property name = "name">
+  <value>Monty</value>
+  </property>
+  
+  <property name = "address">
+  <value>Nakur</value>
+  </property>
+  
+  
+  </bean>
+  
+  <bean class = "com.springcore.Student" name = "student3">
+  
+  <property name = "id">
+  <value> 23242</value>
+  </property>
+  
+  <property name = "name">
+  <value> Shreya </value>
+  </property>
+  
+  <property name="address">
+  <value>Hosiyarpur</value>
+  </property>
+  
+  </bean> 
+  
+  </beans>
+  
+  

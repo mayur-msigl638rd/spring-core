@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd">
+  
+  
+      <bean class="com.springcore.auto.wire.Address" name= "address1">
+      <property name = "street" value = "janak bazar"/>
+      <property name = "city" value = "nakur"/>
+      </bean>
+  
+    <!-- <bean class = "com.springcore.auto.wire.Emp" name = "emp" autowire ="byName"/>  --><!--  Here name of the "name" should be same as the name of the class variable
+                                          --><!-- OR -->
+        <!--  <bean class ="com.springcore.auto.wire.Emp" name = "emp" autowire="byType"/> -->      <!--   Here name of the "name" can be anything it will detect by type  and it will throw exception when you will create 2 beans it will show that two bean has been found of same type  -->                       
+         
+         <bean class = "com.springcore.auto.wire.Emp" name = "emp" autowire = "constructor" />
+    
+  </beans>

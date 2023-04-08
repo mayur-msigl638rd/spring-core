@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:context="http://www.springframework.org/schema/context"
+  xmlns:p="http://www.springframework.org/schema/p"
+  xmlns:util="http://www.springframework.org/schema/util"
+  xsi:schemaLocation="http://www.springframework.org/schema/beans
+  https://www.springframework.org/schema/beans/spring-beans.xsd
+  http://www.springframework.org/schema/context
+  http://www.springframework.org/schema/context/spring-context.xsd
+  http://www.springframework.org/schema/util
+  http://www.springframework.org/schema/util/spring-util.xsd">
+  
+   <!-- standalone list -->
+   
+   <util:list list-class="java.util.ArrayList" id = "mybestfriends" >
+   <value>Mayur</value>
+   <value>Monty</value>
+   <value>Bruno</value>
+   <value>Mars</value>
+   </util:list>
+       <!--  Standalone set -->
+       
+       <util:set set-class ="java.util.HashSet" id ="syll">
+       <value>data structure</value>
+       <value>low level design</value>
+       <value>system design</value>
+       <value>java</value>
+       
+       </util:set>
+       
+ <!--   Standalone map -->
+   
+   <util:map map-class= "java.util.HashMap" id="fees" >
+     <entry key="Spring Framework" value ="8000" />
+     <entry key="Java" value ="28434"/>
+     <entry key="Python" value = "32324"/>
+   </util:map>
+   
+   
+   <!-- Standalone properties -->
+   
+   <util:properties id='dbconfig'>
+   
+    <prop key = "driver">com.mysql.cj.jdbc.Driver </prop>
+    <prop key = "username">monty </prop>
+    <prop key = "password">abcd</prop>
+    <prop key = "url">mysql:jdbc://localhost:3306/springjdbc</prop>
+   </util:properties>
+   
+   
+   
+  <bean class ="com.springcore.standalone.collections.Person" name  = "person1">
+ 
+ <!--  <property name = "friends">
+    <ref bean= "mybestfriends"/>
+  </property>  OR -->
+  
+  <property name = "friends" ref = "mybestfriends" />
+  <property name = "feestructure" ref = "fees"/>
+  <property name = "syllabus" ref ="syll"/>
+  <property name = "properties" ref ="dbconfig"/>
+  </bean>
+  
+  
+  </beans>
+  
+ 
